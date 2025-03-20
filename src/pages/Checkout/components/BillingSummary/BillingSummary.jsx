@@ -9,24 +9,24 @@ export const BillingSummary = () => {
     <div className="billing-container">
       <div className="price-details-container">
         <div>
-          <span className="subtotal">Subtotal</span>
-          <span>${userDataState.orderDetails?.cartItemsTotal}</span>
+          <h4 className="subtotal">Subtotal</h4>
+          <h3>${userDataState.orderDetails?.cartItemsTotal}</h3>
         </div>
 
         <div>
-          <span className="subtotal">Discount</span>
-          <span>
+          <h4 className="subtotal">Discount</h4>
+          <h3>
             $
             {(
               userDataState.orderDetails?.cartItemsTotal -
               userDataState.orderDetails?.cartItemsDiscountTotal
             ).toFixed(2)}
-          </span>
+          </h3>
         </div>
 
         <div>
-          <span>Shipping</span>
-          <span>Free</span>
+          <h4>Shipping</h4>
+          <h3>Free</h3>
         </div>
         <div>
           <span>Total</span>

@@ -46,22 +46,22 @@ export const CartAmountSummary = ({ couponSelected }) => {
     <div className="cart-price-container">
       <h1>Summary</h1>
       <div className="subtotal-container">
-        <span>Sub-total: </span>
-        <span>${totalOriginalPrice}</span>
+        <h4>Sub-total: </h4>
+        <h3>${totalOriginalPrice}</h3>
       </div>
       <div className="discount-container">
-        <span>Discount: </span>
-        <span>-${totalOriginalPrice - totalDiscountedPriceBeforeCoupon}</span>
+        <h4>Discount: </h4>
+        <h3>-${totalOriginalPrice - totalDiscountedPriceBeforeCoupon}</h3>
       </div>
       {isCouponApplied && (
         <div className="discount-container">
-          <span>Coupon Discount: </span>
-          <span> -${totalCouponDiscount}</span>
+          <h4>Coupon Discount: </h4>
+          <h3> -${totalCouponDiscount}</h3>
         </div>
       )}
       <div className="shipping-container">
-        <span>Estimated Delivery & Handling:</span>
-        <span>Free</span>
+        <h4>Estimated Delivery & Handling:</h4>
+        <h3>Free</h3>
       </div>
       <div className="total">
         <span className="total-container">Total: </span>

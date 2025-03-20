@@ -11,16 +11,23 @@
 }
 .delivery-address-description .name {
   margin-bottom: 15px;
+  font-weight: bolder;
 }
 
 .delivery-address-description .address {
   margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+.delivery-address-description .contact {
+  font-weight: bolder;
 }
 
 .delivery-address-container p {
   color: grey;
   margin-bottom: 15px;
-  font-weight: bolder;
+  font-weight: bold;
+  font-size: x-large;
 }
 
 .place-order-btn {

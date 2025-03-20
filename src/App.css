@@ -38,4 +38,6 @@ button {
 
   --secondary-background-color: rgb(232, 232, 232);
   --secondary-background-color-onhover: rgb(214, 214, 214);
+
+  --card-active-color: white;
 }

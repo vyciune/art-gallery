@@ -12,9 +12,10 @@
   background-color: rgb(255, 255, 255);
   margin: auto;
   width: 290px;
-  height: 520px;
+  height: fit-content;
   text-align: center;
   border-radius: 10px;
+  padding-bottom: 1rem;
 }
 
 .address-input-container h1 {
@@ -23,13 +24,25 @@
   margin-bottom: 25px;
 }
 
+.address-modal-container .address-input-container .input-container {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
 .address-modal-container .address-input-container input {
   padding: 8px 16px;
   display: block;
   width: 90%;
-  margin: 12px auto;
+  margin: 2px auto 12px auto;
   border: 1px solid rgb(226, 226, 226);
   border-radius: 5px;
+}
+
+.address-modal-container .address-input-container label {
+  text-align: left;
+  padding-left: 22px;
+  font-size: 14px;
 }
 
 .address-modal-container .submit {

@@ -75,105 +75,120 @@ export const AddressModal = () => {
       <div className="address-input-container">
         <h1>Address Form</h1>
         <form
-          onSubmit={(e) => {
-            if (!isEdit) {
-              e.preventDefault();
-              addAddress(addressForm);
-              setAddressForm({
-                name: "",
-                street: "",
-                city: "",
-                state: "",
-                country: "",
-                pincode: "",
-                phone: "",
-              });
-              setIsAddressModalOpen(false);
-            } else {
-              e.preventDefault();
-              updateAddress(addressForm);
-              setAddressForm({
-                name: "",
-                street: "",
-                city: "",
-                state: "",
-                country: "",
-                pincode: "",
-                phone: "",
-              });
-              setIsAddressModalOpen(false);
-              setIsEdit(false);
-            }
-          }}
-          className="input-container"
+            onSubmit={(e) => {
+              if (!isEdit) {
+                e.preventDefault();
+                addAddress(addressForm);
+                setAddressForm({
+                  name: "",
+                  street: "",
+                  city: "",
+                  state: "",
+                  country: "",
+                  pincode: "",
+                  phone: "",
+                });
+                setIsAddressModalOpen(false);
+              } else {
+                e.preventDefault();
+                updateAddress(addressForm);
+                setAddressForm({
+                  name: "",
+                  street: "",
+                  city: "",
+                  state: "",
+                  country: "",
+                  pincode: "",
+                  phone: "",
+                });
+                setIsAddressModalOpen(false);
+                setIsEdit(false);
+              }
+            }}
+            className="input-container"
         >
+
+          <label htmlFor="name">Name</label>
           <input
-            name="name"
-            value={addressForm.name}
-            required
-            onChange={(e) =>
-              setAddressForm({ ...addressForm, name: e.target.value })
-            }
-            placeholder="Enter Name"
+              name="name"
+              value={addressForm.name}
+              required
+              onChange={(e) =>
+                  setAddressForm({...addressForm, name: e.target.value})
+              }
+              placeholder="Enter Name"
           />
+
+          <label htmlFor="street">Street</label>
           <input
-            required
-            value={addressForm.street}
-            onChange={(e) =>
-              setAddressForm({ ...addressForm, street: e.target.value })
-            }
-            placeholder="Enter Street"
+              name={"street"}
+              required
+              value={addressForm.street}
+              onChange={(e) =>
+                  setAddressForm({...addressForm, street: e.target.value})
+              }
+              placeholder="Enter Street"
           />
+
+          <label htmlFor="city">City</label>
           <input
-            name="city"
-            required
-            value={addressForm.city}
-            onChange={(e) =>
-              setAddressForm({ ...addressForm, city: e.target.value })
-            }
-            placeholder="Enter City"
+              name="city"
+              required
+              value={addressForm.city}
+              onChange={(e) =>
+                  setAddressForm({...addressForm, city: e.target.value})
+              }
+              placeholder="Enter City"
           />
+
+          <label htmlFor="state">State</label>
           <input
-            name="state"
-            required
-            value={addressForm.state}
-            onChange={(e) =>
-              setAddressForm({ ...addressForm, state: e.target.value })
-            }
-            placeholder="Enter State"
+              name="state"
+              required
+              value={addressForm.state}
+              onChange={(e) =>
+                  setAddressForm({...addressForm, state: e.target.value})
+              }
+              placeholder="Enter State"
           />
+
+          <label htmlFor="country">Country</label>
           <input
-            name="country"
-            value={addressForm.country}
-            required
-            onChange={(e) =>
-              setAddressForm({ ...addressForm, country: e.target.value })
-            }
-            placeholder="Enter Country"
+              name="country"
+              value={addressForm.country}
+              required
+              onChange={(e) =>
+                  setAddressForm({...addressForm, country: e.target.value})
+              }
+              placeholder="Enter Country"
           />
+
+          <label htmlFor="pincode">Pincode</label>
           <input
-            name="pincode"
-            value={addressForm.pincode}
-            required
-            onChange={(e) =>
-              setAddressForm({ ...addressForm, pincode: e.target.value })
-            }
-            placeholder="Enter Pincode"
+              name="pincode"
+              value={addressForm.pincode}
+              required
+              onChange={(e) =>
+                  setAddressForm({...addressForm, pincode: e.target.value})
+              }
+              placeholder="Enter Pincode"
           />
+
+          <label htmlFor="phone">Phone</label>
           <input
-            name="phone"
-            value={addressForm.phone}
-            required
-            onChange={(e) =>
-              setAddressForm({ ...addressForm, phone: e.target.value })
-            }
-            placeholder="Enter Phone"
-            minLength="8"
+              name="phone"
+              value={addressForm.phone}
+              required
+              onChange={(e) =>
+                  setAddressForm({...addressForm, phone: e.target.value})
+              }
+              placeholder="Enter Phone"
+              minLength="8"
           />
-          <input className="submit" type="submit" value="Save" />
+          <input className="submit" type="submit" value="Save"/>
         </form>
         <div className="btn-container">
-          <button onClick={() => setIsAddressModalOpen(false)}>Cancel</button>
+        <button onClick={() => setIsAddressModalOpen(false)}>Cancel</button>
           <button
             onClick={() => {
               setAddressForm({ ...dummyAddress });
